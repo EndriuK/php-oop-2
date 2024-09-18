@@ -85,6 +85,23 @@ class Cuccia extends Prodotto
     }
 }
 
+// Creazione di categorie
+$categoriaCani = new Categoria("Cani");
+$categoriaGatti = new Categoria("Gatti");
+
+// Creazione di prodotti
+$ciboCani = new Cibo("Cibo per cani", 19.99, "cibo_cani.jpg", $categoriaCani, "Secco");
+$giocoGatti = new Gioco("Gioco per gatti", 9.99, "gioco_gatti.jpg", $categoriaGatti, "Plastica");
+$cucciaCani = new Cuccia("Cuccia per cani", 49.99, "cuccia_cani.jpg", $categoriaCani, "Grande");
+
+// Visualizzazione dei dettagli dei prodotti
+echo "<h1>Dettagli dei prodotti:</h1>";
+echo "<pre>";
+var_dump($ciboCani->getDettagli());
+var_dump($giocoGatti->getDettagli());
+var_dump($cucciaCani->getDettagli());
+echo "</pre>";
+
 ?>
 
 
