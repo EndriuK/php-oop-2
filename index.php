@@ -109,6 +109,18 @@ $prodotti = [
     new Cuccia("Cuccia per cani", 49.99, "cuccia_cani.jpg", $categoriaCani, "Grande")
 ];
 
+// Visualizzazione card dei prodotti
+echo "<h1>Lista Prodotti</h1>";
+foreach ($prodotti as $prodotto) {
+    echo "<div class='card'>";
+    echo "<img src='{$prodotto->immagine}' alt='{$prodotto->titolo}' style='width:150px;'>";
+    echo "<h2>{$prodotto->titolo}</h2>";
+    echo "<p>Prezzo: {$prodotto->prezzo}€</p>";
+    echo "<p>Categoria: {$prodotto->categoria->nome}</p>";
+    echo "<p>{$prodotto->getDettagli()}</p>";
+    echo "</div><br>";
+}
+
 ?>
 
 
