@@ -11,6 +11,28 @@ class Categoria
     }
 }
 
+// Classe Prodotto
+class Prodotto
+{
+    public $titolo;
+    public $prezzo;
+    public $immagine;
+    public $categoria;
+
+    public function __construct($titolo, $prezzo, $immagine, Categoria $categoria)
+    {
+        $this->titolo = $titolo;
+        $this->prezzo = $prezzo;
+        $this->immagine = $immagine;
+        $this->categoria = $categoria;
+    }
+
+    public function getDettagli()
+    {
+        return "Titolo: {$this->titolo}, Prezzo: {$this->prezzo}€, Categoria: {$this->categoria->nome}";
+    }
+}
+
 ?>
 
 
