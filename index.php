@@ -102,6 +102,13 @@ var_dump($giocoGatti->getDettagli());
 var_dump($cucciaCani->getDettagli());
 echo "</pre>";
 
+// Array di prodotti
+$prodotti = [
+    new Cibo("Cibo per cani", 19.99, "cibo_cani.jpg", $categoriaCani, "Secco"),
+    new Gioco("Gioco per gatti", 9.99, "gioco_gatti.jpg", $categoriaGatti, "Plastica"),
+    new Cuccia("Cuccia per cani", 49.99, "cuccia_cani.jpg", $categoriaCani, "Grande")
+];
+
 ?>
 
 
