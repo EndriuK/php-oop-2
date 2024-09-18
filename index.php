@@ -68,6 +68,23 @@ class Gioco extends Prodotto
     }
 }
 
+// Classe Cuccia
+class Cuccia extends Prodotto
+{
+    public $dimensioni;
+
+    public function __construct($titolo, $prezzo, $immagine, Categoria $categoria, $dimensioni)
+    {
+        parent::__construct($titolo, $prezzo, $immagine, $categoria);
+        $this->dimensioni = $dimensioni;
+    }
+
+    public function getDettagli()
+    {
+        return parent::getDettagli() . ", Dimensioni: {$this->dimensioni}";
+    }
+}
+
 ?>
 
 
