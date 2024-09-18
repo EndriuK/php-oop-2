@@ -33,6 +33,24 @@ class Prodotto
     }
 }
 
+
+// Classe Cibo
+class Cibo extends Prodotto
+{
+    public $tipoCibo;
+
+    public function __construct($titolo, $prezzo, $immagine, Categoria $categoria, $tipoCibo)
+    {
+        parent::__construct($titolo, $prezzo, $immagine, $categoria);
+        $this->tipoCibo = $tipoCibo;
+    }
+
+    public function getDettagli()
+    {
+        return parent::getDettagli() . ", Tipo di Cibo: {$this->tipoCibo}";
+    }
+}
+
 ?>
 
 
