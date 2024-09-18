@@ -51,6 +51,23 @@ class Cibo extends Prodotto
     }
 }
 
+// Classe Gioco
+class Gioco extends Prodotto
+{
+    public $materiale;
+
+    public function __construct($titolo, $prezzo, $immagine, Categoria $categoria, $materiale)
+    {
+        parent::__construct($titolo, $prezzo, $immagine, $categoria);
+        $this->materiale = $materiale;
+    }
+
+    public function getDettagli()
+    {
+        return parent::getDettagli() . ", Materiale: {$this->materiale}";
+    }
+}
+
 ?>
 
 
